@@ -1,0 +1,14 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "YouTubeAPIKey": "",
+    "YouTubeChannelID": "",
+    "YouTubeUserID": "",
+    "TwitterConsumerKey": "",
+    "TwitterConsumerSecet": "",
+    "TwitterAccessTokenKey": "",
+    "TwitterAccessTokenSecret": ""
+  }
+}
