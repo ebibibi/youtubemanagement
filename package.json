@@ -1,0 +1,13 @@
+{
+  "name": "youtubemanagement",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "func start",
+    "test": "echo \"No tests yet...\""
+  },
+  "dependencies": {
+    "googleapis": "^95.0.0",
+    "twitter": "^1.7.1"
+  }
+}
