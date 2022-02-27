@@ -2,7 +2,31 @@ module.exports = async function (context, myTimer) {
 
     var video = await getRamdomVideo();
     context.log(video);
+    title = video.title;
+    videoId = video.resourceId.videoId
+    url = `https://www.youtube.com/watch?v=${videoId}`
+    var tweet = `過去に投稿した動画の紹介です。 ${title} ${url}`
+    context.log(tweet);
+    tweetPost(tweet);
 
+    function tweetPost(content) {
+        var Twitter = require('twitter');
+        var client = new Twitter({
+            consumer_key: process.env["TwitterConsumerKey"],
+            consumer_secret: process.env["TwitterConsumerSecet"],
+            access_token_key: process.env["TwitterAccessTokenKey"],
+            access_token_secret: process.env["TwitterAccessTokenSecret"]
+          });
+      
+        client.post('statuses/update', {status: content}, function(error, tweet, response) {
+          if (!error) {
+            console.log("tweet success: " + content);
+          } else {
+            console.log(error);
+          }
+        });
+      }
+    
 
 
     async function getRamdomVideo() {
@@ -54,10 +78,3 @@ module.exports = async function (context, myTimer) {
     }
     
 };
-
-
-
-
-
-
-
