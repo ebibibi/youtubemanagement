@@ -7,7 +7,7 @@
     "test": "echo \"No tests yet...\""
   },
   "dependencies": {
-    "googleapis": "^95.0.0",
+    "googleapis": "^176.0.0",
     "twitter": "^1.7.1"
   }
 }
